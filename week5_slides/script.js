@@ -6,3 +6,13 @@ window.onload = function() {
         myElement.innerHTML = "New text";
     }
 }
+
+// $(document).ready(function(){
+//     console.log("hello world with JQuery!");
+
+//     $("#text").click(function(){
+//         $("#text").text("New text with JQuery");
+//     });
+// });
+
+
