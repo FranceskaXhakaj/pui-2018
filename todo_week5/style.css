@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: teal;
+}
+
+/*********** HEADER ************/
+
+header {
+    font-family: 'Roboto Slab', serif;
+    background-color: teal;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+header a {
+    color: gold;
+    text-decoration: none;
+    padding: 5px;
+}
+
+h1 {
+    margin: 0;
+}
+
+/*********** LISTS ************/
+
+#todo-lists {
+    margin: 0 auto;
+    padding-top: 10px;
+    width: 80%;
+}
+
+.list {
+    background-color: #eee;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.list a {
+    text-decoration: none;
+    color: teal;
+}
+
+.list-title {
+    font-size: 2em;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+button {
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid teal;
+    padding: 10px;
+    color: teal;
+    font-size: 0.8em;
+}
+
+input {
+    padding: 10px;
+    font-size: 0.8em;
+}

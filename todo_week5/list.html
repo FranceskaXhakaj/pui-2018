@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To Do App</title>
+    <!-- styles -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab" rel="stylesheet">
+    <!-- javascript -->
+    <script src="main.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <h1>My To Do Lists</h1>
+            <nav>
+                <a href="index.html">main</a> -
+                <a href="index.html">settings</a>
+            </nav>
+        </header>
+
+        <div id="todo-lists">
+            <div class="list">
+                <h2 class="list-title">Grocerie</h2>
+                <ol id="grocery-list">
+                    <li> <input type="checkbox" class="complete-item" onclick="completeListItem(this)"> Eggs <button class="delete-item" onclick="deleteListItem(this.parentNode)">X</button></li></li>
+                    <li> <input type="checkbox" class="complete-item" onclick="completeListItem(this)"> Milk <button class="delete-item" onclick="deleteListItem(this.parentNode)">X</button></li></li>
+                    <li> <input type="checkbox" class="complete-item" onclick="completeListItem(this)"> Cereal <button class="delete-item" onclick="deleteListItem(this.parentNode)">X</button></li></li>
+                </ol>
+
+            </div>
+            <input id="new-list-item" type="text"></input>
+            <button onclick="addListItem()">Add Item</button>
+        </div>
+    </div>
+</body>
+
+</html>
