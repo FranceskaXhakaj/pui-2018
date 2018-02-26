@@ -64,51 +64,10 @@ function generateRandomAge() {
 /*** Document Load ****/
 $(document).ready(function() {
 
-// Solution to OBJECTS EXERCISE part only
-// Uncomment the following and comment the rest (after the divising slashes below)
-
-  // // generate a random animal when the document opens
-  // var animal = generateRandomAnimal();
-  // // update the page based on the animal properties
-  // $("#animal-properties").text(animal.name + "  " + animal.age + "years old");
-  // $("#animal-img").attr("src", animal.image);
-
-///////////////////////////////////////////////////////////////////////////
-
-
-// Solution to WEBSTORAGE EXERCISE part only
-// Uncomment the following and comment the above (before the divising slashes)
-
-  //generate a random animal when the document opens
-  var animal = JSON.parse(localStorage.getItem("savedAnimal"));
-  var hasSavedAnimal = false;
-  if (animal === null) {
-    $("#button-storage").text("Save Animal");
-    animal = generateRandomAnimal();
-  } else {
-    $("#button-storage").text("Clear Animal");
-    hasSavedAnimal = true;
-  }
-
+  // generate a random animal when the document opens
+  var animal = generateRandomAnimal();
   // update the page based on the animal properties
   $("#animal-properties").text(animal.name + "  " + animal.age + "years old");
   $("#animal-img").attr("src", animal.image);
 
-  $("#button-storage").click(function() {
-    if (hasSavedAnimal) {
-      // clear the animal from the browser
-      localStorage.removeItem("savedAnimal");
-      // if this button was clicked, hide button and show feedback
-      $("#button-storage").css("display", "none");
-      $("#button-action-text").text("Cleared!");
-      $("#button-action-text").css("display", "block");
-    } else {
-      // save the animal to the browser
-      localStorage.setItem("savedAnimal", JSON.stringify(animal));
-      // if this button was clicked, hide button and show feedback
-      $("#button-storage").css("display", "none");
-      $("#button-action-text").text("Saved!");
-      $("#button-action-text").css("display", "block");
-    }
-  });
 });
