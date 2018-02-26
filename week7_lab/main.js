@@ -25,7 +25,7 @@ var animals = [new Cat(), new Dog(), new Bird()];
 var names = ["Toothless", "Marshmallow", "Momo", "Coco", "Ollie", "Oscar", "Bella", "Ruby", "Apples"];
 
 /*** Functions ***/
-// get a random index for an array from 0 to maxIndex
+// get a random index for an array from 0 to maxIndex (not inclusive)
 function getRandomIndex(maxIndex) {
   return Math.floor(Math.random() * maxIndex);
 }
