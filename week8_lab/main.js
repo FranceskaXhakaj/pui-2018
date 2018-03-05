@@ -67,9 +67,10 @@ $(document).ready(function() {
   // get the savedAnimal in local storage if one exists
   var animal = JSON.parse(localStorage.getItem("savedAnimal"));
 
+  //use a boolean to keep track of whether you have saved an animal
   var hasSavedAnimal = false;
 
-  //check if the saved animal exists or if it is null
+  //check if the saved animal exists in local storage
   if (animal === null) 
   {
     //if there is no saved animal, the button should display the Save Animal text
@@ -96,9 +97,10 @@ $(document).ready(function() {
     //when we are clearing the animal
     if (hasSavedAnimal) 
     {
-      // clear the animal from the browser
+      // clear the animal from the local storage
       localStorage.removeItem("savedAnimal");
-      // if this button was clicked, hide button and show feedback
+
+      // if this button was clicked, hide button and show message to user
       $("#button-storage").css("display", "none");
       $("#button-action-text").text("Cleared!");
       $("#button-action-text").css("display", "block");
@@ -106,9 +108,10 @@ $(document).ready(function() {
     //when we are saving the animal
     else 
     {
-      // save the animal to the browser
+      // save the animal to the local storage
       localStorage.setItem("savedAnimal", JSON.stringify(animal));
-      // if this button was clicked, hide button and show feedback
+
+      // if this button was clicked, hide button and show message to user
       $("#button-storage").css("display", "none");
       $("#button-action-text").text("Saved!");
       $("#button-action-text").css("display", "block");
